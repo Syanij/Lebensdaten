@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="360.0" maxWidth="600.0" minHeight="360.0" minWidth="600.0" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewController">
+   <children>
+      <VBox layoutX="42.0" layoutY="35.0" spacing="10.0">
+         <children>
+            <Label layoutX="53.0" layoutY="33.0" text="Datum wählen">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+            </Label>
+            <HBox layoutX="53.0" layoutY="67.0" spacing="15.0">
+               <children>
+                  <HBox layoutX="53.0" layoutY="67.0">
+                     <children>
+                        <Button fx:id="dMinus" layoutX="53.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleDMinus" prefHeight="35.0" prefWidth="25.0" text="&lt;" />
+                        <Label fx:id="tag" alignment="CENTER" layoutX="78.0" layoutY="67.0" prefHeight="35.0" prefWidth="40.0" text="10">
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="dPlus" layoutX="119.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleDPlus" prefHeight="35.0" prefWidth="25.0" text="&gt;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="159.0" layoutY="67.0">
+                     <children>
+                        <Button fx:id="mMinus" layoutX="53.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleMMinus" prefHeight="35.0" prefWidth="25.0" text="&lt;" />
+                        <Label fx:id="monat" alignment="CENTER" layoutX="78.0" layoutY="67.0" prefHeight="35.0" prefWidth="40.0" text="12">
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="mPlus" layoutX="119.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleMPlus" prefHeight="35.0" prefWidth="25.0" text="&gt;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="265.0" layoutY="67.0">
+                     <children>
+                        <Button fx:id="yMinus" layoutX="53.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleYMinus" prefHeight="35.0" prefWidth="25.0" text="&lt;" />
+                        <Label fx:id="jahr" alignment="CENTER" layoutX="78.0" layoutY="67.0" prefHeight="35.0" prefWidth="60.0" text="2018">
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="yPlus" layoutX="119.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleYPlus" prefHeight="35.0" prefWidth="25.0" text="&gt;" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="speichern" layoutX="446.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleSpeichern" prefHeight="35.0" prefWidth="107.0" text="Speichern">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="44.0" layoutY="138.0" text="Schlafphasen">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <VBox layoutX="42.0" layoutY="203.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="44.0" layoutY="178.0" spacing="10.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="182.0" prefHeight="17.0" prefWidth="41.0" text="Phase 1" />
+                  <TextField fx:id="p1a" layoutX="100.0" layoutY="178.0" prefHeight="25.0" prefWidth="40.0" />
+                  <TextField fx:id="p1e" layoutX="173.0" layoutY="178.0" prefHeight="25.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="213.0" spacing="10.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="182.0" prefHeight="17.0" prefWidth="41.0" text="Phase 2" />
+                  <TextField fx:id="p2a" layoutX="100.0" layoutY="178.0" prefHeight="25.0" prefWidth="40.0" />
+                  <TextField fx:id="p2e" layoutX="173.0" layoutY="178.0" prefHeight="25.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="251.0" spacing="10.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="182.0" prefHeight="17.0" prefWidth="41.0" text="Phase 3" />
+                  <TextField fx:id="p3a" layoutX="100.0" layoutY="178.0" prefHeight="25.0" prefWidth="40.0" />
+                  <TextField fx:id="p3e" layoutX="173.0" layoutY="178.0" prefHeight="25.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="102.0" layoutY="177.0" spacing="30.0">
+         <children>
+            <Label layoutX="104.0" layoutY="152.0" text="Von" />
+            <Label layoutX="157.0" layoutY="152.0" text="Bis" />
+         </children>
+      </HBox>
+      <Label layoutX="265.0" layoutY="138.0" text="Aktivität">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="aktivitaet" layoutX="324.0" layoutY="134.0" prefHeight="25.0" prefWidth="40.0" />
+      <Label layoutX="449.0" layoutY="138.0" text="Monatskalender?">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <VBox layoutX="447.0" layoutY="204.0" spacing="5.0">
+         <children>
+            <HBox spacing="20.0">
+               <children>
+                  <RadioButton fx:id="jaRadio" layoutX="447.0" layoutY="203.0" mnemonicParsing="false" text="Ja">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="jaNein" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="neinRadio" layoutX="501.0" layoutY="203.0" mnemonicParsing="false" selected="true" text="Nein" toggleGroup="$jaNein" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <RadioButton fx:id="sta1" layoutX="447.0" layoutY="242.0" mnemonicParsing="false" text="+">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sta" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="sta2" layoutX="447.0" layoutY="266.0" mnemonicParsing="false" text="++" toggleGroup="$sta" />
+            <RadioButton fx:id="sta3" layoutX="447.0" layoutY="290.0" mnemonicParsing="false" text="+++" toggleGroup="$sta" />
+         </children>
+      </VBox>
+      <Label layoutX="263.0" layoutY="177.0" text="Anderes">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <HBox layoutX="263.0" layoutY="204.0" spacing="20.0">
+         <children>
+            <VBox layoutX="221.0" layoutY="204.0" spacing="2.0">
+               <children>
+                  <CheckBox fx:id="g" layoutX="221.0" layoutY="204.0" mnemonicParsing="false" selected="true" text="G" />
+                  <CheckBox fx:id="a" layoutX="221.0" layoutY="225.0" mnemonicParsing="false" text="A" />
+                  <CheckBox fx:id="m" layoutX="221.0" layoutY="242.0" mnemonicParsing="false" text="M" />
+                  <CheckBox fx:id="lg" layoutX="221.0" layoutY="259.0" mnemonicParsing="false" text="LG" />
+                  <CheckBox fx:id="r" layoutX="221.0" layoutY="276.0" mnemonicParsing="false" text="R" />
+               </children>
+            </VBox>
+            <VBox layoutX="308.0" layoutY="208.0" spacing="2.0">
+               <children>
+                  <CheckBox fx:id="s" layoutX="221.0" layoutY="204.0" mnemonicParsing="false" text="S" />
+                  <CheckBox fx:id="p" layoutX="221.0" layoutY="225.0" mnemonicParsing="false" text="P" />
+                  <CheckBox fx:id="one" layoutX="221.0" layoutY="242.0" mnemonicParsing="false" text="1" />
+                  <CheckBox fx:id="k" layoutX="221.0" layoutY="259.0" mnemonicParsing="false" text="K" />
+                  <CheckBox fx:id="t" layoutX="221.0" layoutY="276.0" mnemonicParsing="false" text="T" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
