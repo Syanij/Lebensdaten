@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,65 +12,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="360.0" maxWidth="600.0" minHeight="360.0" minWidth="600.0" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewController">
+<AnchorPane prefHeight="470.0" prefWidth="600.0" styleClass="Anchorpane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewController">
    <children>
-      <VBox layoutX="42.0" layoutY="35.0" spacing="10.0">
-         <children>
-            <Label layoutX="53.0" layoutY="33.0" text="Datum wählen">
-               <font>
-                  <Font name="Calibri" size="18.0" />
-               </font>
-            </Label>
-            <HBox layoutX="53.0" layoutY="67.0" spacing="15.0">
-               <children>
-                  <HBox layoutX="53.0" layoutY="67.0">
-                     <children>
-                        <Button fx:id="dMinus" layoutX="53.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleDMinus" prefHeight="35.0" prefWidth="25.0" text="&lt;" />
-                        <Label fx:id="tag" alignment="CENTER" layoutX="78.0" layoutY="67.0" prefHeight="35.0" prefWidth="40.0" text="10">
-                           <font>
-                              <Font name="Calibri" size="14.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="dPlus" layoutX="119.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleDPlus" prefHeight="35.0" prefWidth="25.0" text="&gt;" />
-                     </children>
-                  </HBox>
-                  <HBox layoutX="159.0" layoutY="67.0">
-                     <children>
-                        <Button fx:id="mMinus" layoutX="53.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleMMinus" prefHeight="35.0" prefWidth="25.0" text="&lt;" />
-                        <Label fx:id="monat" alignment="CENTER" layoutX="78.0" layoutY="67.0" prefHeight="35.0" prefWidth="40.0" text="12">
-                           <font>
-                              <Font name="Calibri" size="14.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="mPlus" layoutX="119.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleMPlus" prefHeight="35.0" prefWidth="25.0" text="&gt;" />
-                     </children>
-                  </HBox>
-                  <HBox layoutX="265.0" layoutY="67.0">
-                     <children>
-                        <Button fx:id="yMinus" layoutX="53.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleYMinus" prefHeight="35.0" prefWidth="25.0" text="&lt;" />
-                        <Label fx:id="jahr" alignment="CENTER" layoutX="78.0" layoutY="67.0" prefHeight="35.0" prefWidth="60.0" text="2018">
-                           <font>
-                              <Font name="Calibri" size="14.0" />
-                           </font>
-                        </Label>
-                        <Button fx:id="yPlus" layoutX="119.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleYPlus" prefHeight="35.0" prefWidth="25.0" text="&gt;" />
-                     </children>
-                  </HBox>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-      <Button fx:id="speichern" layoutX="446.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleSpeichern" prefHeight="35.0" prefWidth="107.0" text="Speichern">
+      <Label layoutX="40.0" layoutY="130.0" text="Datum wählen" AnchorPane.leftAnchor="40.0">
          <font>
-            <Font size="14.0" />
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="speichern" layoutX="441.0" layoutY="124.0" mnemonicParsing="false" onAction="#handleSpeichern" prefHeight="30.0" prefWidth="107.0" styleClass="Button" text="Speichern" textFill="WHITE" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="126.0">
+         <font>
+            <Font name="Calibri" size="16.0" />
          </font>
       </Button>
-      <Label layoutX="44.0" layoutY="138.0" text="Schlafphasen">
+      <Label layoutX="40.0" layoutY="204.0" text="Schlafphasen" AnchorPane.leftAnchor="40.0">
          <font>
             <Font name="Calibri" size="14.0" />
          </font>
       </Label>
-      <VBox layoutX="42.0" layoutY="203.0" spacing="10.0">
+      <VBox layoutX="40.0" layoutY="263.0" spacing="10.0" AnchorPane.leftAnchor="40.0">
          <children>
             <HBox alignment="CENTER_LEFT" layoutX="44.0" layoutY="178.0" spacing="10.0">
                <children>
@@ -90,51 +54,51 @@
             </HBox>
          </children>
       </VBox>
-      <HBox layoutX="102.0" layoutY="177.0" spacing="30.0">
+      <HBox layoutX="94.0" layoutY="242.0" spacing="30.0">
          <children>
-            <Label layoutX="104.0" layoutY="152.0" text="Von" />
+            <Label layoutX="104.0" layoutY="152.0" prefHeight="17.0" prefWidth="36.0" text="Von" />
             <Label layoutX="157.0" layoutY="152.0" text="Bis" />
          </children>
       </HBox>
-      <Label layoutX="265.0" layoutY="138.0" text="Aktivität">
+      <Label layoutX="366.0" layoutY="204.0" text="Aktivität" AnchorPane.leftAnchor="366.0">
          <font>
             <Font name="Calibri" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="aktivitaet" layoutX="324.0" layoutY="134.0" prefHeight="25.0" prefWidth="40.0" />
-      <Label layoutX="449.0" layoutY="138.0" text="Monatskalender?">
+      <TextField fx:id="aktivitaet" layoutX="369.0" layoutY="267.0" prefHeight="25.0" prefWidth="40.0" AnchorPane.leftAnchor="370.0" />
+      <Label layoutX="461.0" layoutY="204.0" text="Monatskalender?" AnchorPane.rightAnchor="40.0">
          <font>
             <Font name="Calibri" size="14.0" />
          </font>
       </Label>
-      <VBox layoutX="447.0" layoutY="204.0" spacing="5.0">
+      <VBox layoutX="450.0" layoutY="267.0" spacing="5.0" AnchorPane.rightAnchor="40.0">
          <children>
             <HBox spacing="20.0">
                <children>
-                  <RadioButton fx:id="jaRadio" layoutX="447.0" layoutY="203.0" mnemonicParsing="false" text="Ja">
+                  <RadioButton fx:id="jaRadio" layoutX="447.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleJa" text="Ja">
                      <toggleGroup>
                         <ToggleGroup fx:id="jaNein" />
                      </toggleGroup></RadioButton>
-                  <RadioButton fx:id="neinRadio" layoutX="501.0" layoutY="203.0" mnemonicParsing="false" selected="true" text="Nein" toggleGroup="$jaNein" />
+                  <RadioButton fx:id="neinRadio" layoutX="501.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleNein" selected="true" text="Nein" toggleGroup="$jaNein" />
                </children>
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
             </HBox>
-            <RadioButton fx:id="sta1" layoutX="447.0" layoutY="242.0" mnemonicParsing="false" text="+">
+            <RadioButton fx:id="sta1" layoutX="447.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleSta1" text="+">
                <toggleGroup>
                   <ToggleGroup fx:id="sta" />
                </toggleGroup></RadioButton>
-            <RadioButton fx:id="sta2" layoutX="447.0" layoutY="266.0" mnemonicParsing="false" text="++" toggleGroup="$sta" />
-            <RadioButton fx:id="sta3" layoutX="447.0" layoutY="290.0" mnemonicParsing="false" text="+++" toggleGroup="$sta" />
+            <RadioButton fx:id="sta2" layoutX="447.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleSta2" text="++" toggleGroup="$sta" />
+            <RadioButton fx:id="sta3" layoutX="447.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleSta3" text="+++" toggleGroup="$sta" />
          </children>
       </VBox>
-      <Label layoutX="263.0" layoutY="177.0" text="Anderes">
+      <Label layoutX="239.0" layoutY="204.0" text="Anderes" AnchorPane.leftAnchor="240.0">
          <font>
             <Font name="Calibri" size="14.0" />
          </font>
       </Label>
-      <HBox layoutX="263.0" layoutY="204.0" spacing="20.0">
+      <HBox layoutX="239.0" layoutY="267.0" spacing="20.0" AnchorPane.leftAnchor="240.0">
          <children>
             <VBox layoutX="221.0" layoutY="204.0" spacing="2.0">
                <children>
@@ -156,5 +120,19 @@
             </VBox>
          </children>
       </HBox>
+      <DatePicker fx:id="picker" layoutX="181.0" layoutY="127.0" prefHeight="30.0" prefWidth="141.0" AnchorPane.topAnchor="126.0" />
+      <Separator layoutX="30.0" layoutY="177.0" prefHeight="8.0" prefWidth="540.0" AnchorPane.leftAnchor="30.0" />
+      <ImageView fitHeight="70.0" fitWidth="540.0" layoutX="30.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../OneDrive/Javafx%20(Projekt%20Lebensdaten)/leaves.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="40.0" layoutY="384.0" prefHeight="8.0" prefWidth="540.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+      <TextField fx:id="dataAdress" layoutX="180.0" layoutY="417.0" prefHeight="25.0" prefWidth="425.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="40.0" />
+      <Label layoutX="41.0" layoutY="419.0" text="Speicherpfad" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
